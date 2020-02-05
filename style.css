@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    margin: 5%;
+  }
+  
+  #js-error-message {
+    color: red;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  li {
+    margin: 2px 0px;
+  }
+  .repo-url {
+    margin-bottom: 15px;
+    list-style: none;
+  }
+  
+  .repo-url a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 2px;
+  }
+  
+  .repo-url a:hover {
+    background-color: blue;
+  }

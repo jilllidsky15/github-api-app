@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>GitHub API App</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>GitHub Repo Search</h1>
+
+        <form>
+            <p>Search for a GitHub username to see a list of associated repos & URLs.</p>
+            <input id="js-search-username" type="text" name="search-username" placeholder="Enter a username" required />
+            <input type="submit" value="Search">
+        </form>
+
+        <p id="js-error-message"></p>
+
+        <section id="results" class="hidden">
+            <h2>Results</h2>
+            <!-- Display repo name and repo url -->
+            <ul id="results-list">
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
