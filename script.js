@@ -14,21 +14,27 @@ function getUsernameInfo(username) {
             displayResults(responseJson))
         .catch(err => {
             $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('#results').addClass('hidden');
         });
 }
 
 function displayResults(responseJson) {
     // console.log(responseJson);
-    $('#results-list').html('');
-    responseJson.forEach(function (item) {
-        // console.log(item);
-        $("#results-list").append(`
-    <li class="repo-name">${item.name}</li>
-    <li class="repo-url">
-      <a href="${item.html_url}">URL</a>
-    </li>`);
-    });
-    $('#results').removeClass('hidden');
+    if (responseJson.length > 0) {
+        $('#results-list').empty();
+        responseJson.forEach(function (item) {
+            console.log(item);
+            $("#results-list").append(`
+            <li class="repo-name">${item.name}</li>
+            <li class="repo-url">
+            <a href="${item.html_url}">URL</a>
+            </li>`);
+        });
+        $('#results').removeClass('hidden');
+    }
+    else {
+        $('#results').addClass('hidden');
+    }
 }
 
 function getValue() {
